@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/ic_nav_dashboard"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/nav_devices"
+        android:icon="@drawable/ic_nav_devices"
+        android:title="Modem" />
+    <item
+        android:id="@+id/nav_map"
+        android:icon="@drawable/ic_nav_map"
+        android:title="Peta" />
+    <item
+        android:id="@+id/nav_voice_ai"
+        android:icon="@drawable/ic_nav_voice"
+        android:title="Voice AI" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_nav_account"
+        android:title="Akun" />
+</menu>

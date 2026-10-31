@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutChatContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvChatSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Asisten AI"
+        android:textColor="@color/primary_burgundy"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvChatMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/bg_chat_ai"
+        android:lineSpacingExtra="3dp"
+        android:padding="12dp"
+        android:text="Halo! Ada yang bisa saya bantu?"
+        android:textColor="@color/text_main"
+        android:textSize="13sp" />
+
+</LinearLayout>

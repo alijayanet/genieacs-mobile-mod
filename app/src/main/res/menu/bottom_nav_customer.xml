@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_cust_home"
+        android:icon="@drawable/ic_nav_devices"
+        android:title="Modem Saya" />
+    <item
+        android:id="@+id/nav_cust_wifi"
+        android:icon="@drawable/ic_nav_wifi"
+        android:title="Ganti WiFi" />
+    <item
+        android:id="@+id/nav_cust_voice"
+        android:icon="@drawable/ic_nav_voice"
+        android:title="Tanya AI" />
+    <item
+        android:id="@+id/nav_cust_profile"
+        android:icon="@drawable/ic_nav_account"
+        android:title="Info Akun" />
+</menu>

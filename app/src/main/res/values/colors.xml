@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Default GenieACS Light Theme (Clean White & Slate with Signature Burgundy) -->
+    <color name="bg_dark">#F8FAFC</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_card_secondary">#F1F5F9</color>
+    <color name="border_cyan">#0284C7</color>
+    <color name="border_card">#E2E8F0</color>
+
+    <!-- Official GenieACS Brand Burgundy / Wine Red -->
+    <color name="primary_cyan">#9C1D4A</color>
+    <color name="primary_burgundy">#9C1D4A</color>
+    <color name="primary_burgundy_dark">#881337</color>
+    <color name="primary_blue">#0284C7</color>
+    <color name="accent_purple">#7C3AED</color>
+    <color name="accent_pink">#DB2777</color>
+
+    <!-- Signal Badges -->
+    <color name="signal_green">#16A34A</color>
+    <color name="signal_yellow">#D97706</color>
+    <color name="signal_red">#DC2626</color>
+    <color name="signal_offline">#64748B</color>
+
+    <!-- Text Colors for Default Theme -->
+    <color name="text_main">#0F172A</color>
+    <color name="text_muted">#64748B</color>
+    <color name="text_sub">#94A3B8</color>
+
+    <color name="ic_launcher_background">#9C1D4A</color>
+</resources>

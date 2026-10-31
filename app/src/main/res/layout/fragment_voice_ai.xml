@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:orientation="vertical">
+
+    <!-- VOICE STATUS HUD -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvVoiceAssistantTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎙️ GenieACS Voice AI"
+            android:textColor="@color/text_main"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvVoiceSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Bicara santai &amp; tanyakan apa saja seputar jaringan"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp" />
+
+        <!-- THE ORB BUTTON -->
+        <FrameLayout
+            android:id="@+id/btnVoiceOrb"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_card"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/ivOrbIcon"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_nav_voice"
+                app:tint="@color/primary_burgundy" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvOrbStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Ketuk bola mikrofon untuk bicara"
+            android:textColor="@color/primary_burgundy"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- INTERRUPT / STOP SPEECH BUTTON -->
+        <Button
+            android:id="@+id/btnInterruptVoice"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="⏹️ Hentikan &amp; Bicara Lagi"
+            android:textColor="@color/signal_red"
+            android:visibility="gone"
+            app:strokeColor="@color/signal_red" />
+    </LinearLayout>
+
+    <!-- TRANSCRIPT CHAT BUBBLES -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvVoiceChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp" />
+
+    <!-- QUICK SUGGESTION CHIPS -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_dark"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="6dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chipRxKritis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_card"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="🔴 Cek Redaman Kritis"
+                android:textColor="@color/signal_red"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/chipModemMati"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_card"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="⚠️ Berapa Modem Mati"
+                android:textColor="@color/signal_yellow"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/chipStatusModem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_card"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="📊 Status Semua Modem"
+                android:textColor="@color/primary_blue"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/chipModemBaru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                android:text="🆕 Cek Modem Baru"
+                android:textColor="@color/primary_burgundy"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- MANUAL TEXT & MIC INPUT BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/etVoiceText"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input"
+            android:hint="Ketik pertanyaan atau tekan tombol mic..."
+            android:inputType="text"
+            android:paddingHorizontal="14dp"
+            android:textColor="@color/text_main"
+            android:textColorHint="@color/text_sub"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/btnMicInput"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_nav_voice"
+            app:tint="@color/primary_burgundy" />
+
+        <ImageButton
+            android:id="@+id/btnSendVoiceText"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_send"
+            app:tint="@color/primary_blue" />
+    </LinearLayout>
+
+</LinearLayout>
