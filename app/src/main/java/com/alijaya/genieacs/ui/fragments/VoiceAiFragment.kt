@@ -112,9 +112,9 @@ class VoiceAiFragment : Fragment() {
 
         // Salam awal
         val greeting = if (session.userRole == SessionManager.ROLE_ADMIN) {
-            "Halo Admin Alijaya Net! Saya Asisten AI GenieACS dengan pengenalan suara dinamis. Anda bisa langsung bicara seperti \"cek redaman\", \"berapa modem mati\", atau ketuk tombol pintasan di bawah."
+            "Halo Admin! Saya Asisten AI GenieACS dengan pengenalan suara dinamis. Anda bisa langsung bicara seperti \"cek redaman\", \"berapa modem mati\", atau ketuk tombol pintasan di bawah."
         } else {
-            "Halo! Saya asisten WiFi Alijaya Net. Ketuk bola mikrofon untuk bertanya cara ganti sandi WiFi, cek kondisi sinyal, atau restart modem."
+            "Halo! Saya asisten pintar WiFi GenieACS. Ketuk bola mikrofon untuk bertanya cara ganti sandi WiFi, cek kondisi sinyal, atau restart modem."
         }
         chatAdapter.addMessage(ChatMessage("Asisten AI", greeting, false))
     }
